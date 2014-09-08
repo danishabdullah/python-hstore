@@ -17,7 +17,7 @@ def guess_val_type(val):
 
 
 def parse_numeric_value_hstore(string):
-    tmp = a.replace('"',"").split(",")
+    tmp = string.replace('"',"").split(",")
     res = {}
     for i in tmp:
         key, value = map(str.strip, i.split("=>"))
