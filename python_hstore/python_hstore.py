@@ -17,6 +17,8 @@ def guess_val_type(val):
 
 
 def parse_numeric_value_hstore(string):
+    if not string:
+        return {}
     tmp = string.replace('"',"").split(",")
     res = {}
     for i in tmp:
